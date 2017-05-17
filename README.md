@@ -72,7 +72,7 @@ python manage.py runserver
 * Choose 'Report Today' to review report of API calls done on present date.<br />
 * Choose 'Report Month' to review report of API calls done in past month.<br />
 * Choose 'Report Year' to review report of API calls done in present year.<br />
-![Screenshot](/Screenshots/User_Data_Year.png)
+![Screenshot](/Screenshots/User_Data_Today.png)
 
 ## Built With
 
@@ -98,6 +98,6 @@ Too lazy to decide on a License. zZzZ
 
 ## Acknowledgments
 
-* YouTube Videos __/\\__
+* YouTube Videos (Thank god they exist :')'
 * StackOverFlow xD
 * Django Documentation FTW
