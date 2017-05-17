@@ -60,19 +60,15 @@ python manage.py runserver
 
 ![Screenshot](/Screenshots/Welcome_Page.png)
 
-<br />
 * Authenticate yourself to enter admin table.<br />
 ![Screenshot](/Screenshots/Authentication.png)
 
-<br />
 * Choose '1_User_Data' to access user data table to see all API calls.<br />
 ![Screenshot](/Screenshots/User_Data.png)
 
-<br />
 * Use Search bar to filter data according to fields given in table.<br />
 ![Screenshot](/Screenshots/Search_Filter.png)
 
-<br />
 * Choose 'Report Today' to review report of API calls done on present date.<br />
 * Choose 'Report Month' to review report of API calls done in past month.<br />
 * Choose 'Report Year' to review report of API calls done in present year.<br />
@@ -102,6 +98,6 @@ Too lazy to decide on a License. zZzZ
 
 ## Acknowledgments
 
-* YouTube Videos __/\__
+* YouTube Videos __/\\__
 * StackOverFlow xD
 * Django Documentation FTW
