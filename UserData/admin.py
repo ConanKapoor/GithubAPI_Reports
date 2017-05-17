@@ -16,5 +16,40 @@ class User_dataAdmin(admin.ModelAdmin):
     class Meta:
         model = user_data
 
+#Proxy Table 1.
+class ReportToday(user_data):
+    class Meta:
+        proxy = True
+
+#Filter query for present day.
+class Query_Today(User_dataAdmin):
+    def get_queryset(self, requests):
+        return self.model.objects.filter(Updated_on = datetime.date.today())
+
+#Proxy Table 2.
+class ReportYear(user_data):
+    class Meta:
+        proxy = True
+
+#Filter query for year.
+class Query_Year(User_dataAdmin):
+    Updated = datetime.date.today()
+    def get_queryset(self, requests):
+        return self.model.objects.filter(Updated_on__year__lte= datetime.datetime.today().year)
+
+#Proxy Table 3.
+class ReportMonth(user_data):
+    class Meta:
+        proxy = True
+
+#Filter query for month.
+class Query_Month(User_dataAdmin):
+    def get_queryset(self, requests):
+        return self.model.objects.filter(Updated_on__month__lte= datetime.datetime.today().month)
+
+
 #Registering Tables for admin page.
 admin.site.register(user_data, User_dataAdmin)
+admin.site.register(ReportToday, Query_Today)
+admin.site.register(ReportYear, Query_Year)
+admin.site.register(ReportMonth, Query_Month)
