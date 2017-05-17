@@ -45,7 +45,7 @@ class ReportMonth(user_data):
 #Filter query for month.
 class Query_Month(User_dataAdmin):
     def get_queryset(self, requests):
-        return self.model.objects.filter(Updated_on__month__lte= datetime.datetime.today().month).exclude(Updated_on__month__lt= ((datetime.datetime.today().month)- 1))
+        return self.model.objects.filter(Updated_on__month__lte= datetime.datetime.today().month).exclude(Updated_on__month__lt= ((datetime.datetime.today().month)- 1)).filter(Updated_on__year= datetime.datetime.today().year)
 
 
 #Registering Tables for admin page.
