@@ -20,6 +20,7 @@
 
 
       <div class="container text-center">
+          By - Shivam Kapoor(The guy from Chennai)
           <form class="form-signin" id="login_form" method="post" action="/">
 
             {% csrf_token %}
@@ -28,6 +29,7 @@
             <input type="text" name="user" class="form-control" placeholder="Enter Username here!" value="" required autofocus>
             <br>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Get Data</button>
+            <button onclick="location.href='http://127.0.0.1:8000/admin';" class="btn btn-lg btn-danger btn-block" type="button">Admin Panel</button>
           </form>
       </div>
 
