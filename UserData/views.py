@@ -27,7 +27,7 @@ def userdata_retrieval(request):
             data_into_table = user_data(Idx=retrievedList[0]['id'], User_name=str(retrievedList[0]['login']),Full_name=str(retrievedList[0]['name']),
                                         Location=str(retrievedList[0]['location']), Blog=str(retrievedList[0]['blog']), Public_repos=retrievedList[0]['public_repos'],
                                         Public_gists=retrievedList[0]['public_gists'], Email=str(retrievedList[0]['email']), Followers=retrievedList[0]['followers'],
-                                        Following=retrievedList[0]['following'], Updated_on=date.today())
+                                        Following=retrievedList[0]['following'], Updated_on=date.today(), Image=retrievedList[0]['avatar_url'])
             data_into_table.save()
 
     return render(request, 'UserData/userdata.html', content)

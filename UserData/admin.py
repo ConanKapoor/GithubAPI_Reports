@@ -10,7 +10,7 @@ from .models import user_data
 
 #Creating Admin Table Layout.
 class User_dataAdmin(admin.ModelAdmin):
-    list_display = ['Idx','User_name', 'Full_name', 'Location', 'Blog', 'Public_repos', 'Public_gists', 'Email', 'Followers', 'Following', 'Updated_on']
+    list_display = ['Thumbnail', 'Idx','User_name', 'Full_name', 'Location', 'Blog', 'Public_repos', 'Public_gists', 'Email', 'Followers', 'Following', 'Updated_on']
 
     class Meta:
         model = user_data

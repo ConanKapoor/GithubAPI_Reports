@@ -16,6 +16,12 @@ class user_data(models.Model):
     Followers = models.PositiveIntegerField()
     Following = models.PositiveIntegerField()
     Updated_on = models.DateField()
+    Image = models.CharField(max_length=500, default='No Picture Available. Weird!')
+
+    #Thumbnail function to show thumbails in admin tables.
+    def Thumbnail(self):
+        return '<img src="%s" width="30" height="30"/>' % self.Image
+    Thumbnail.allow_tags = True
 
     class Meta(object):
         verbose_name = '1_User Data'
