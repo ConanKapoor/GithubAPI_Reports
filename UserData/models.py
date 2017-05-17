@@ -5,11 +5,11 @@ from django.db import models
 
 #Creating user_data model to store data.
 class user_data(models.Model):
-    Idx = models.PositiveIntegerField()
+    Idx = models.PositiveIntegerField(primary_key=True)
     User_name = models.CharField(max_length=200)
     Full_name = models.CharField(max_length=250, blank=True, null=True)
-    Location = models.CharField(max_length=200)
-    Blog = models.CharField(max_length=200)
+    Location = models.CharField(max_length=200, blank=True, null=True)
+    Blog = models.CharField(max_length=200, blank=True, null=True)
     Public_repos = models.PositiveIntegerField()
     Public_gists = models.PositiveIntegerField()
     Email = models.CharField(max_length=250, blank=True, null=True)
